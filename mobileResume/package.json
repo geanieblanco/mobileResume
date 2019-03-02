@@ -1,5 +1,5 @@
 {
-  "name": "mobileResume",
+  "name": "mobileresume",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,8 +7,12 @@
     "test": "jest"
   },
   "dependencies": {
+    "npm": "^6.8.0",
     "react": "16.6.3",
-    "react-native": "0.58.6"
+    "react-native": "0.58.6",
+    "react-native-communications": "^2.2.1",
+    "react-native-ionicons": "^4.5.5",
+    "react-navigation": "^3.3.2"
   },
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
@@ -19,5 +23,25 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "description": "Geanie Blanco's mobile resume",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geanieblanco/mobileResume.git"
+  },
+  "keywords": [
+    "resume"
+  ],
+  "author": "Geanie Blanco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geanieblanco/mobileResume/issues"
+  },
+  "homepage": "https://github.com/geanieblanco/mobileResume#readme",
+  "rnpm": {
+    "assets": [
+      "./src/assets/fonts/"
+    ]
   }
 }
