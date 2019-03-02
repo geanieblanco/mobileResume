@@ -48,7 +48,6 @@ class LandingScreen extends React.Component {
   }
 }
 
-
 class AboutScreen extends React.Component {
   static navigationOptions = {
     tabBarIcon: () => (
@@ -95,7 +94,7 @@ class AboutScreen extends React.Component {
 class ResumeScreen extends React.Component {
   static navigationOptions = {
     tabBarIcon: () => (
-      <Icon name="document"/>
+      <Icon name="document" color="#5DEAE5"/>
     )
   }
   render() {
@@ -105,8 +104,7 @@ class ResumeScreen extends React.Component {
               <Header title="Resume"/>
           <ScrollView
           contentContainerStyle={{
-            justifyContent: 'center',
-            alignItems: 'center'}}>
+            justifyContent: 'center'}}>
                 <View style={[styles.bar, {backgroundColor: "#FF6BEB"}]} >
                   <Text style={styles.headline}>Summary</Text>
                 </View>
@@ -125,19 +123,77 @@ class ResumeScreen extends React.Component {
                 <Text style={styles.subhead}>Programs</Text>
                   <Text style={styles.type}>
                   Sketch, Figma, Photoshop Elements, XCode, VS Code, Github, Microsoft Suite, GSuite</Text>
+
+                <View style={[styles.bar, {backgroundColor: "#FF6BEB"}]}>
+                  <Text style={styles.headline}>Soft Skills</Text>
+                </View>
+
+                <Text style={styles.type}>
+                  Public speaking, conflict management, critial thinking, copy editing, data entry, basic research methods, event management | Typing: 75WPM.</Text>
                   
-                <View style={[styles.bar, {backgroundColor: "#FF6BEB"}]} >
+                <View style={[styles.bar, {backgroundColor: "#FFEF60"}]} >
                   <Text style={styles.headline}>Projects</Text>
                 </View>
 
                 <Text style={styles.subhead}>Streetscape</Text>
                   <Text style={styles.type}>
-                  Technologies used: React Native, Google Maps API, MySQL, Node.JS, XCode, Android Studio, Cocoapods, Grunt, Firebase, AWS</Text>
-                  <Text style={{fontFamily: "BitstreamVeraSansMono-Bold"}}>Website | Repo</Text>
+                    Technologies used: React Native, Google Maps API, MySQL, Node.JS, XCode, Android Studio, Cocoapods, Grunt, Firebase, AWS</Text>
+                    <Text 
+                    style={styles.link}
+                    onPress={() => Communications.web('https://www.streetscape.io')}>Website</Text>
 
                   <Text style={styles.subhead}>Mobile Resume</Text>
                   <Text style={styles.type}>
-                  Technologies used: Sketch/Figma, UX Design, UI Design, React Native, React Native Communications, Node.JS, Hockey App</Text>
+                  Technologies used: Sketch/Figma, React Native, React Native Communications, Node.JS, Hockey App</Text>
+
+                  <Text 
+                    style={styles.link}
+                    onPress={() => Communications.web('https://www.figma.com/file/ITy0ZDaola9hLUXHic2PLz5z/mobresUIUX?node-id=0%3A1')}>UX Design</Text>
+                  <Text 
+                    style={styles.link}
+                    onPress={() => Communications.web('https://www.figma.com/file/ITy0ZDaola9hLUXHic2PLz5z/mobresUIUX?node-id=0%3A118')}>Initial UI Design</Text>
+
+                  <View style={[styles.bar, {backgroundColor: "#FF6BEB"}]} >
+                    <Text style={styles.headline}>Education</Text>
+                  </View>
+
+                  <Text style={styles.subhead}>Rutgers' Coding Bootcamp</Text>
+                  <Text style={styles.type}>Full Stack Development, February 2018</Text>
+
+                  <Text style={styles.subhead}>SUNY Oneonta</Text>
+                  <Text style={styles.type}>BA Communications Studies, May 2015</Text>
+
+
+                  <View style={[styles.bar, {backgroundColor: "#FFEF60"}]}>
+                    <Text style={styles.headline}>Experience</Text>
+                  </View>
+                  <Text style={[styles.subhead, {marginTop:10}]}>X4 Tech Staffing, Office Manager</Text>
+                  <Text style={styles.subhead}>August 2018-April 2019</Text>
+                  <Text style={styles.type}>
+                  -Managed CRM; cleaned over 100,000 pieces of data</Text>
+                  <Text style={styles.type}>
+                  -Oversee office operations including new hire onboarding, receiving and depositing client checks</Text>
+                  <Text style={styles.type}>
+                  -Coordinate invoices and client contracts between the London head office and New York branch</Text>
+
+                  <Text style={[styles.subhead, {marginTop:10}]}>Vans, Visual & Sales Associate</Text>
+                  <Text style={styles.subhead}>August 2017-September 2018</Text>
+                  <Text style={styles.type}>
+                  -Staged window and tabletop visuals according to corporate planograms</Text>
+                  <Text style={styles.type}>
+                  -Consistently lead the store in Units Per Transaction and Average Dollar Spent KPIs</Text>
+                  <Text style={styles.type}>
+                  -Provided excellent customer service by implementing company standards for guest interaction</Text>
+
+                  <Text style={[styles.subhead, {marginTop:10}]}>A to Z Media, Jr. Production Manager</Text>
+                  <Text style={styles.subhead}>February 2016-December 2016</Text>
+                  <Text style={styles.type}>
+                  -Oversaw the production of vinyl, CD, DVD, and print projects for record labels and individual artists</Text>
+                  <Text style={styles.type}>
+                  -Tackled problems proactively with solutions that fit the timeline and needs of each client</Text>
+                  <Text style={styles.type}>
+                  -Ensured that all pieces of each project were completed to client specifications in a timely manner</Text>
+              
               </ScrollView>
           </View>
     );
@@ -146,53 +202,51 @@ class ResumeScreen extends React.Component {
 
 class ContactScreen extends React.Component {
   static navigationOptions = {
+    tabBarLabel: null,
     tabBarIcon: () => (
-      <Icon name="mail"/>
+      <Icon name="mail" color="#89FF77"/>
     )
   }
   render() {
     return (
-      <View style={[styles.container, {justifyContent: 'flex-start', alignItems: 'center'}]}>
-        <Header title="@ Me"/>
-        <View style={[styles.bar, {backgroundColor: "#89FF77"}]} >
-          <Text style={styles.headline}>Social Media</Text>
-        </View>
-        
-        <View style={
-          {
-            flexDirection: 'row',
-            justifyContent: 'space-between'
-            }}>
-          <Icon style={styles.icon} size={50} name="logo-twitter"
-          onPress={() => Communications.web('https://twitter.com/geanieblanco')}/>
-          <Icon style={styles.icon} size={50} name="logo-instagram"
-          onPress={() => Communications.web('https://instagram.com/geanie.me')}/>
-          <Icon style={styles.icon} size={50} name="logo-linkedin"
-          onPress={() => Communications.web('https://www.linkedin.com/in/blancoregina/')}/>
-          <Icon style={styles.icon} size={50} name="logo-github"
-          onPress={() => Communications.web('https://github.com/geanieblanco')}/>
-        </View>
-        <Button 
-        onPress={() => Communications.email(['hello@geanieblanco.com'],null,null,'Message from the App','')}
-        text="Send An Email"
-        style={[styles.button, {backgroundColor: '#FF6BEB'}]}/>
-        
-        <Button 
-        onPress={() => Communications.phonecall('6464702654', true)}
-        text="Leave a Message"
-        style={[styles.button, {backgroundColor: '#FFEF60'}]}/>
-        
-        <Button 
-        onPress={() => Communications.text('6464702654')}
-        text="Send a Text"
-        style={[styles.button, {backgroundColor: '#5DEAE5'}]}/>
+      <View style={[styles.container, { justifyContent: 'flex-start' }]}>
+        <Header title="Connect"/>
+        <View style={{alignContent:'center', alignItems: 'center'}}>
+          <View style={[styles.bar, { backgroundColor: "#89FF77", marginTop:40 }]} >
+            <Text style={styles.headline}>Social Media</Text>
+          </View>
 
-        <Button 
-        onPress={() => Communications.web('https://calendly.com/geanieblanco')}
-        text="Schedule a Meeting"
-        style={[styles.button, {backgroundColor: '#89FF77'}]}/>
+          <View style={
+            {
+              flexDirection: 'row',
+              justifyContent: 'space-between'
+              }}>
+            <Icon style={styles.icon} size={50} name="logo-twitter"
+            onPress={() => Communications.web('https://twitter.com/geanieblanco')}/>
+            <Icon style={styles.icon} size={50} name="logo-instagram"
+            onPress={() => Communications.web('https://instagram.com/geanie.me')}/>
+            <Icon style={styles.icon} size={50} name="logo-linkedin"
+            onPress={() => Communications.web('https://www.linkedin.com/in/blancoregina/')}/>
+            <Icon style={styles.icon} size={50} name="logo-github"
+            onPress={() => Communications.web('https://github.com/geanieblanco')}/>
+            <Icon style={styles.icon} size={50} name="calendar"
+            onPress={() => Communications.web('https://calendly.com/geanieblanco')}/>
+          </View>
 
-        
+          <Button 
+            onPress={() => Communications.email(['hello@geanieblanco.com'],null,null,'Message from the App','')}
+            text="Send An Email"
+            style={[{backgroundColor: '#FF6BEB'}]}/>
+          <Button 
+            onPress={() => Communications.phonecall('6464702654', true)}
+            text="Leave a Message"
+            style={[{backgroundColor: '#FFEF60'}]}/>
+          <Button 
+            onPress={() => Communications.text('6464702654')}
+            text="Send a Text"
+            style={[{backgroundColor: '#5DEAE5'}]}/>
+
+        </View>
       </View>
     );
   }
@@ -209,6 +263,8 @@ const styles = StyleSheet.create({
       fontSize: 15,
       marginLeft: 20,
       marginRight: 20,
+      marginBottom: 5
+
   },
   image: {
       height:210, 
@@ -219,13 +275,16 @@ const styles = StyleSheet.create({
   bar: {
     height: 30,
     width: 220,
-    marginBottom: 10,
+    marginTop: 5,
+    marginBottom: 5,
     justifyContent: 'center',
+    alignSelf: 'center'
   },
   headline: {
     fontSize: 20,
     alignSelf: 'center',
-    fontFamily: "KemcoPixelBold"
+    fontFamily: "KemcoPixelBold",
+    alignSelf: 'center'
   },
   title: {
     fontSize: 40,
@@ -237,10 +296,16 @@ const styles = StyleSheet.create({
     fontFamily: "BitstreamVeraSansMono-BoldOb",
     fontSize: 15,
     textAlign: 'left',
-    marginBottom: 5
+    alignSelf: 'center'
   },
   icon: {
     padding: 10
+  },
+  link: {
+    fontFamily: "BitstreamVeraSansMono-Bold",
+    color:"#5DEAE5",
+    alignSelf: 'center',
+    marginBottom: 3
   }
 })
 
@@ -248,6 +313,11 @@ const TabNavigator = createBottomTabNavigator({
   About: AboutScreen,
   Resume: ResumeScreen,
   Contact: ContactScreen
+},{
+  lazy: false,
+  tabBarOptions: {
+    showLabel: false
+  }
 });
 
 const StackNavigator = createStackNavigator({ 
@@ -273,3 +343,8 @@ export default createAppContainer(createSwitchNavigator(
 // <TextInput style={[styles.bar, {backgroundColor: "#89FF77"}]}/>
 // <Text style={styles.subhead}>Message</Text>
 // <TextInput style={[styles.bar, {backgroundColor: "#FFEF60", height: 220}]}/>
+
+/* <Button 
+onPress={() => Communications.web('https://calendly.com/geanieblanco')}
+text="Book a Meeting"
+style={[{backgroundColor: '#89FF77'}]}/> */

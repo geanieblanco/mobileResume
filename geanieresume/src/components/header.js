@@ -19,7 +19,7 @@ styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         backgroundColor: 'white',
-        justifyContent: 'space-evenly',
+        justifyContent: 'flex-start',
         marginTop: 50,
         alignItems: 'center',
         marginBottom: 20
@@ -27,11 +27,13 @@ styles = StyleSheet.create({
     image: {
         height: 100,
         width: 100,
-        position: 'relative'
+        position: 'relative',
+        marginLeft: 20
     },
     title: {
         marginTop: 30,
         fontSize: 40,
         fontFamily: "KemcoPixelBold",
+        marginLeft: 10
     }
 })
