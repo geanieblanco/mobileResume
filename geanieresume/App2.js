@@ -3,10 +3,15 @@ import { Text, ScrollView, View, Image, StyleSheet, TextInput } from 'react-nati
 import { createBottomTabNavigator, createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
 import Icon from 'react-native-ionicons';
 import Communications from 'react-native-communications';
+import SplashScreen from 'react-native-splash-screen';
 import Header from './src/components/header';
 import Button from './src/components/button';
 
 class LandingScreen extends React.Component {
+  componentDidMount() {
+    SplashScreen.hide();
+  };
+
   static navigationOptions = {
     header: null
   };
