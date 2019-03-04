@@ -24,3 +24,10 @@ Android - Android Studio, Node environment, RN CLI
 * [React Navigation](https://reactnavigation.org/en/)
 * [React Native Communications](https://github.com/anarchicknight/react-native-communications) - NPM package for phone calls and external links
 
+## Screencaps
+![Landing Page](https://github.com/geanieblanco/mobileResume/blob/master/admin/IMG_1704.PNG)
+![About Page](https://github.com/geanieblanco/mobileResume/blob/master/admin/IMG_1701.PNG)
+![Resume Page](https://github.com/geanieblanco/mobileResume/blob/master/admin/IMG_1702.PNG)
+![Contact Page](https://github.com/geanieblanco/mobileResume/blob/master/admin/IMG_1703.PNG)
+
+
