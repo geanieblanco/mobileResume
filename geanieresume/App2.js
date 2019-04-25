@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, ScrollView, View, Image, StyleSheet } from 'react-native';
+import { Text, ScrollView, View, Image, StyleSheet, TextInput } from 'react-native';
 import { createBottomTabNavigator, createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
 import Icon from 'react-native-ionicons';
 import Communications from 'react-native-communications';
